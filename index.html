@@ -90,7 +90,7 @@ var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
      <summary>JS-код расчета и проверки</summary>
      
 
-<code>     
+<pre>    
 &lt;script&gt; 
 //функция расчета длины отрезка по двум координатам
    var calculate = function calc() 
@@ -110,8 +110,8 @@ var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
 document.getElementById('r').value = result;
 
 } 
-</script> 
-<script>
+&lt;/script&gt;  
+&lt;script&gt;
 //функция проверки (так же производит расчет, но уже сравнивает полученный результат с введенным пользователем
   var check = function Unit_test() 
 {
@@ -134,17 +134,17 @@ var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
  alert('Тест не пройден! Результаты не совпадают!');
  }
 }
-</script>
-<script>
+&lt;script&gt;
+&lt;script&gt;
 //фукнция, округляющая введенное число
   function validateFloatKeyPress(el) {
     var v = parseFloat(el.value);
     el.value = (isNaN(v)) ? '' : v.toFixed(0);
 }
-</script> 
+&lt;script&gt; 
 </head>
   
-   </code>
+   </pre>
    
      </details>
       <details>
