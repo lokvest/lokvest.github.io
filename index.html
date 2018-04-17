@@ -10,8 +10,10 @@ canvas {
 }
 </style>
 </head>
-<body onload="startGame()">
-
+<body>
+<details>
+    <summary>ИГРА</summary>
+    <button onclick = "startGame()">
 <script>
 
 var myGamePiece;
@@ -132,11 +134,12 @@ function accelerate(n) {
 }
 </script>
 <br>
-<button onclick = "startGame()">
-    <br>
+
+    
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
+        </deteils>
   <p style="color: green">Ссылка на <a href ="https://github.com/lokvest/lokvest.github.io/wiki">Wiki-страницу</a>     
 </body>
 </html>
