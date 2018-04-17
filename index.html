@@ -86,6 +86,16 @@ var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
 <summary>Проверка расчета</summary>
 <p><input id='but2' type='button' onclick="check()" value="Проверка"> Введите число: <input id='c' type ='text' size = '3' onchange="validateFloatKeyPress(this)" ></p>
 </details>
+   ```
+JSON-код для прямоугольников с текстом
+"rectangle":
+   [{"X1":"10", "Y1":"20", "W":"160", "H":"50", "Tx":"P1_1"},
+    {"X1":"10", "Y1":"70", "W":"160", "H":"50", "Tx":""},
+    {"UL":"10", "UR":"120", "DL":"160", "DL":"50", "Tx":"F1(C1, F3_O1) = F1_O"}
+]
+}
+
+```
    <details>
      <summary>JS-код расчета и проверки</summary>
      
