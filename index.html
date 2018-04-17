@@ -14,12 +14,72 @@
     setTimeout("digitalWatch()", 1000);
   }
 </script>
-  
+ <script> 
+var calculate = function calc() 
+{ 
+var s = [document.getElementById('1point').value,document.getElementById('2point').value, 
+document.getElementById('3point').value, 
+document.getElementById('4point').value]; 
+console.log(s.length); 
+var x1 = parseInt(s[0]); 
+var x2 = parseInt(s[1]); 
+var x3 = parseInt(s[2]); 
+var x4 = parseInt(s[3]); 
+
+var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0); 
+
+document.getElementById('r').value = result;
+
+} 
+</script> 
+<script>
+var check = function Unit_test() 
+{
+var s = [document.getElementById('1point').value,document.getElementById('2point').value, 
+document.getElementById('3point').value, 
+document.getElementById('4point').value]; 
+console.log(s.length); 
+var x1 = parseInt(s[0]); 
+var x2 = parseInt(s[1]); 
+var x3 = parseInt(s[2]); 
+var x4 = parseInt(s[3]); 
+var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
+ if (result == document.getElementById('c').value)
+ {
+ alert('Тест пройден. Полученный результат программой: ' + result + ' Совпадает с вашим: ' + document.getElementById('c').value);
+ }
+ else
+ {
+ alert('Тест не пройден! Результаты не совпадают!');
+ }
+}
+</script>
+<script>
+function validateFloatKeyPress(el) {
+    var v = parseFloat(el.value);
+    el.value = (isNaN(v)) ? '' : v.toFixed(0);
+}
+</script> 
 </head>
 <body onload="digitalWatch()"> 
 <details>
     <summary>Часы</summary>
-    
-
+  <p id="digital_watch" style="color: #f00; font-size: 120%; font-weight: bold;"></p>
+</details>
+ <details>
+<summary>Индивидуальное задание</summary>
+   <h1>Вычисление длины линии по координатам.</h1> 
+<p>Точка 1: x = <input id='1point' type ='text' size = '2'> y = <input id='2point' type ='text' size = '2'> </p> 
+<p>Точка 2: x = <input id='3point' type ='text' size = '2'> y = <input id='4point' type ='text' size = '2'> </p> 
+<details>
+<summary>Расчет длины</summary>
+<input id='but' type='button' onclick="calculate()" value="Расчет"> 
+Результат:<input id='r' type ='text' size = '2' readOnly=true>
+</details>
+<details>
+<summary>Проверка расчета</summary>
+<p><input id='but2' type='button' onclick="check()" value="Проверка"> Введите число: <input id='c' type ='text' size = '3' onchange="validateFloatKeyPress(this)" ></p>
+</details>
+   </details>
 </body>
 </html>
