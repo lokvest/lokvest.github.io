@@ -86,16 +86,52 @@ var result = (Math.sqrt(Math.pow(x3-x1,2) + Math.pow(x4-x2,2))).toFixed(0);
 <summary>Проверка расчета</summary>
 <p><input id='but2' type='button' onclick="check()" value="Проверка"> Введите число: <input id='c' type ='text' size = '3' onchange="validateFloatKeyPress(this)" ></p>
 </details>
-   ```
-JSON-код для прямоугольников с текстом
-"rectangle":
-   [{"X1":"10", "Y1":"20", "W":"160", "H":"50", "Tx":"P1_1"},
-    {"X1":"10", "Y1":"70", "W":"160", "H":"50", "Tx":""},
-    {"UL":"10", "UR":"120", "DL":"160", "DL":"50", "Tx":"F1(C1, F3_O1) = F1_O"}
-]
-}
+<details>
+<summary>JS-код. Варварюк. Построение и проверка построения прямоугольника. </summary>
 
 ```
+<!DOCTYPE html5>
+<html>
+	<head>
+		<script>
+			var x3,y3;
+			//Функция проверки
+			var u = function unit_test(xu,yu)
+			{
+				if (x3==xu && y3==yu) 
+				{
+					alert('Тест пройден');
+				}
+				else 
+				{
+					alert('Тест не пройден');
+				}
+			}
+			//Функция рисования
+			var d = function draw() 
+			{
+				var c = canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+				var s = document.getElementById('text1').value.split(",");
+				var x1 = parseInt(s[0]);
+				var y1 = parseInt(s[1]);
+				var x2 = parseInt(s[2]);
+				var y2 = parseInt(s[3]);
+				c = document.getElementById('canvas').getContext('2d').strokeRect(x1,y1,x2,y2);
+				x3=x1+x2; y3=y1+y2;
+				return[x3,y3];
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1" value="10,20,160,160"> 
+		<input type="button" onclick="d()" value="Построить"/>
+		<input type="button" onclick="u(170,180)" value="Проверить"/>
+	<br>
+	<canvas id="canvas" width="800" height="800">
+	</body>
+	</html>	
+```
+</details>
    <details>
      <summary>JS-код расчета и проверки</summary>
      
