@@ -12,8 +12,8 @@
 <li>Задокументировать созданный класс(метод) в wiki</li>
 </ul>
 <br>
->ntrc
->>sda
+
+
 <p><b>Cссылки:</b></p>
 <p><a href="https://lokvest.github.io/">Личная страница</a></p>
 <p><a href="https://github.com/lokvest/lokvest.github.io">Репозиторий</a></p>
