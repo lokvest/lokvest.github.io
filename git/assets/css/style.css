@@ -36,8 +36,12 @@ body {
 	color: #555;
 	
 }
+tr{
+	text-align: center;
+}
 img{
 	width: 600px;
+	float:right;
 }
 p{
 	padding: 0 0 20px 0;
@@ -59,7 +63,12 @@ ul li {
 .main{
 	min-height: 100%;
 	position: relative;
-	
+	/*height: 100%;*/
+
+}
+.notalign{
+margin-top:20px;
+float:none;	
 }
 .header {
 	background-color: DarkSlateGrey;
@@ -126,7 +135,7 @@ ul.menu li a:hover{
 	/*min-height: 100%;*/
 	padding-bottom:150px; 
 	/*margin-bottom:100px;*/
-	max-height: 1000px;
+	height: 100%;
 
 }
 .sidebarcontainer {
@@ -172,7 +181,9 @@ ul.menu li a:hover{
 	/*padding: 0 0 0 10px;*/
 	float: left;
 	margin: 0 0 16px 8px;	
-	max-height: 1000px;
+	/*max-height: 1000px;*/
+	/*overflow: hidden;*/
+	height:100%;
 }
 
 #topic {
@@ -186,13 +197,14 @@ ul.menu li a:hover{
 }
 #topiccontent{
 	/*margin:0;*/
+	/*overflow-y: hidden;*/
 	padding: 0 5px 0 15px;
 	background-color: #f9f9f9;
 	border-top: none;
 	border-left: solid 1px #f2f2f2;
 	border-right: solid 1px #f2f2f2;
 	border-bottom: solid 1px #f2f2f2;
-	min-height: 347px;
+	min-height: 316px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -308,19 +320,19 @@ li.linked:hover{
 	border-left: solid 1.5px darkgray;
 	border-bottom: solid 1px #f2f2f2;
 	width: 100%;
-	/*height: 60%;*/
+	height: 100%;
 	margin: 0px 0 0 2px; 
 	border-top: solid 3px DarkGrey;
 	border-top-right-radius: 5px;
 	border-bottom: solid 1px DarkGrey;
 	/*border-top: solid 1px Gray;*/
 	/*border-top: solid 1px DimGray;*/
-	position: relative;
-	z-index: 2;
+	/*position: relative;*/
+	/*z-index: 2;*/
 	word-wrap: break-word;
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 	hyphens: auto;
-	max-height:950px;
+	/*height:1000px;*/
 	padding: 10px;
 }
 .footer {
