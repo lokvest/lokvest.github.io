@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding:0;
+	bottom:0;
 }
 input[type="text"], input[type="password"], input[type="search"] {
 	color: #5d5d5d;
@@ -26,8 +27,11 @@ a, a:hover{
 	text-decoration: underline;
 	color:#aeb002;
 }
+html,body{
+	height: 100%;
+}
 body {
-	
+	/*height: 100%;*/
 	font-size: 1.2em;
 	background-color: #fff;
 	color: #555;
@@ -44,6 +48,16 @@ ul li {
 	padding:0 0 4px 5px;
 	line-height: 1.5em;
 }
+
+.main, .logo, .menubar, .site_content, .footer {
+	margin-left :auto;
+	margin-right: auto;
+}
+.main{
+	min-height: 100%;
+	position: relative;
+	
+}
 .header {
 	background-color: DarkSlateGrey;
 	height: 177px;
@@ -51,10 +65,6 @@ ul li {
 	margin-left: 0px;
 	margin-right:0px;
 	min-width: 1200px; 
-}
-.main, .logo, .menubar, .site_content, .footer {
-	margin-left :auto;
-	margin-right: auto;
 }
 .logo {
 	width: 1200px;
@@ -64,17 +74,11 @@ ul li {
 	font: normal 300% 'century gothic', arial, sans-serif;
 	margin : 0 0 0 9px;
 }
-/*.logo h3, .logo h4 {
-	font: normal 300% 'century gothic', arial, sans-serif;
-	margin : 0 9px 0 0;
-	float: right;
-	white-space: nowrap;
-	width:200px;
-}*/
+
 .logotext h1, .logotext h1 a, .logotext h1 a:hover {
 	padding: 22px 0 0 0;
 	color: white;
-	leter-spacing: 0.1em;
+	letter-spacing: 0.1em;
 	text-decoration: none;
 }
 .logotext h2 {
@@ -83,15 +87,7 @@ ul li {
 	color: #999;
 	width: 200px;
 }
-/*.logotext h3, .logotext h4{
-	font-size: 1em;
-	padding: 4px 0 0 0;
-	color: #999;
-}*/
-/*.menubar{
-	width: 900px;
-	height:46px;
-}*/
+
 ul.menu {
 	float:right;
 }
@@ -118,10 +114,15 @@ ul.menu li a:hover{
 	color: CornflowerBlue;
 }
 .sitecontent {
-	width: 1200px;
-	overflow:hidden;
-	margin: 20px auto 0 auto;
+	/*width: 1200px;*/
+	/*overflow:auto;*/
+	margin: 20px 1% 0 3%;
 	background-color: white;
+	/*position:relative;*/
+	/*min-height: 100%;*/
+	padding-bottom:80px; 
+	/*margin-bottom:100px;*/
+
 }
 .sidebarcontainer {
 	float: left;
@@ -162,6 +163,7 @@ ul.menu li a:hover{
 .content{
 	text-align: left;
 	width: 928px;
+	/*margin-bottom:10px;*/
 	/*padding: 0 0 0 10px;*/
 	float: left;
 	margin: 0 0 16px 8px;	
@@ -306,17 +308,21 @@ li.linked:hover{
 	z-index: 2;
 }
 .footer {
+	position: absolute;
 	width: 100%;
-	height: 100px;
-	padding: 5px 0 5px 0;
+	height: 120px;
+	/*padding: 5px 0 5px 0;*/
 	text-align: center;
 	background-color: DarkSlateGrey; 
 	color: #999;
 	/*margin-left: 0px;
 	margin-right: 0px;*/
-	min-width: 1200px;
-	bottom: 0px;
-	position: absolute;
+	width:100%;
+	bottom: 0;
+	left:0;
+	/*height:80px;*/
+	
+	/*vertical-align: bottom;*/
 }
 
 .footer a{
