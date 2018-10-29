@@ -192,6 +192,9 @@ ul.menu li a:hover{
 	border-left: solid 1px #f2f2f2;
 	border-right: solid 1px #f2f2f2;
 	border-bottom: solid 1px #f2f2f2;
+	min-height: 347px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .content a {
