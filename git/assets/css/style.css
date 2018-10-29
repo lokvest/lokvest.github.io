@@ -316,21 +316,9 @@ li.linked:hover{
 	margin-right: 0px;*/
 	min-width: 1200px;
 	bottom: 0px;
-	position: relative;
-}
-#footer{
-	width: 100%;
-	height: 100px;
-	padding: 5px 0 5px 0;
-	text-align: center;
-	background-color: DarkSlateGrey; 
-	color: #999;
-	/*margin-left: 0px;
-	margin-right: 0px;*/
-	min-width: 1200px;
-	bottom: 0px;
 	position: absolute;
 }
+
 .footer a{
 	color:#999;
 	text-decoration: none;
